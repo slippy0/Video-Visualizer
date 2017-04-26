@@ -17,12 +17,12 @@ video {
 
 #groundtruth {
   display: inline-block;
-  width: 200px;
+  width: 400px;
 }
 
 #predictions {
   display: inline-block;
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 
