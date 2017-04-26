@@ -197,7 +197,8 @@ $(function() {
           '<option value="' + videoName + '">' + videoName + '</option>');
     });
     $('#video-selector').html(options.join(''));
-    $('#video-selector').val('video_validation_0000153').change();
+    $("#video-selector :nth-child(1)").prop('selected', true).change()
+    //$('#video-selector').val('video_validation_0000153').change();
   });
   $('#video-selector').change(function() {
     loadVideo($(this).val());
