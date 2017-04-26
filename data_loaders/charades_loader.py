@@ -7,7 +7,7 @@ from data_loader import DataLoader
 class CharadesLoader(DataLoader):
     # Static variables
     FRAME_RATE = 24 # in FPS
-    SAMPLE_RATE = 4 # one prediction per N frames
+    SAMPLE_RATE = 10 # one prediction per N frames
     _TIME_PER_SAMPLE = SAMPLE_RATE / float(FRAME_RATE)
 
     def __init__(self, videos_dir, prediction_dir, class_list):
@@ -97,7 +97,7 @@ class CharadesLoader(DataLoader):
             # Repeat by SAMPLE_RATE to have one label per frame
             predictions[class_name] = pred_raw[:,class_idx] \
                     .flatten() \
+                    .repeat(CharadesLoader.SAMPLE_RATE) \
                     .tolist()
-                    #.repeat(CharadesLoader.SAMPLE_RATE) \
 
         return predictions
