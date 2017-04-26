@@ -1,157 +1,157 @@
-Holding some clothes
-Putting clothes somewhere
-Taking some clothes from somewhere
-Throwing clothes somewhere
-Tidying some clothes
-Washing some clothes
-Closing a door
-Fixing a door
-Opening a door
-Putting something on a table
-Sitting on a table
-Sitting at a table
-Tidying up a table
-Washing a table
-Working at a table
-Holding a phone/camera
-Playing with a phone/camera
-Putting a phone/camera somewhere
-Taking a phone/camera from somewhere
-Talking on a phone/camera
-Holding a bag
-Opening a bag
-Putting a bag somewhere
-Taking a bag from somewhere
-Throwing a bag somewhere
-Closing a book
-Holding a book
-Opening a book
-Putting a book somewhere
-Smiling at a book
-Taking a book from somewhere
-Throwing a book somewhere
-Watching/Reading/Looking at a book
-Holding a towel/s
-Putting a towel/s somewhere
-Taking a towel/s from somewhere
-Throwing a towel/s somewhere
-Tidying up a towel/s
-Washing something with a towel
-Closing a box
-Holding a box
-Opening a box
-Putting a box somewhere
-Taking a box from somewhere
-Taking something from a box
-Throwing a box somewhere
-Closing a laptop
-Holding a laptop
-Opening a laptop
-Putting a laptop somewhere
-Taking a laptop from somewhere
-Watching a laptop or something on a laptop
-Working/Playing on a laptop
-Holding a shoe/shoes
-Putting shoes somewhere
-Putting on shoe/shoes
-Taking shoes from somewhere
-Taking off some shoes
-Throwing shoes somewhere
-Sitting in a chair
-Standing on a chair
-Holding some food
-Putting some food somewhere
-Taking food from somewhere
-Throwing food somewhere
-Eating a sandwich
-Making a sandwich
-Holding a sandwich
-Putting a sandwich somewhere
-Taking a sandwich from somewhere
-Holding a blanket
-Putting a blanket somewhere
-Snuggling with a blanket
-Taking a blanket from somewhere
-Throwing a blanket somewhere
-Tidying up a blanket/s
-Holding a pillow
-Putting a pillow somewhere
-Snuggling with a pillow
-Taking a pillow from somewhere
-Throwing a pillow somewhere
-Putting something on a shelf
-Tidying a shelf or something on a shelf
-Reaching for and grabbing a picture
-Holding a picture
-Laughing at a picture
-Putting a picture somewhere
-Taking a picture of something
-Watching/looking at a picture
-Closing a window
-Opening a window
-Washing a window
-Watching/Looking outside of a window
-Holding a mirror
-Smiling in a mirror
-Washing a mirror
-Watching something/someone/themselves in a mirror
-Walking through a doorway
-Holding a broom
-Putting a broom somewhere
-Taking a broom from somewhere
-Throwing a broom somewhere
-Tidying up with a broom
-Fixing a light
-Turning on a light
-Turning off a light
-Drinking from a cup/glass/bottle
-Holding a cup/glass/bottle of something
-Pouring something into a cup/glass/bottle
-Putting a cup/glass/bottle somewhere
-Taking a cup/glass/bottle from somewhere
-Washing a cup/glass/bottle
-Closing a closet/cabinet
-Opening a closet/cabinet
-Tidying up a closet/cabinet
-Someone is holding a paper/notebook
-Putting their paper/notebook somewhere
-Taking paper/notebook from somewhere
-Holding a dish
-Putting a dish/es somewhere
-Taking a dish/es from somewhere
-Wash a dish/dishes
-Lying on a sofa/couch
-Sitting on sofa/couch
-Lying on the floor
-Sitting on the floor
-Throwing something on the floor
-Tidying something on the floor
-Holding some medicine
-Taking/consuming some medicine
-Putting groceries somewhere
-Laughing at television
-Watching television
-Someone is awakening in bed
-Lying on a bed
-Sitting in a bed
-Fixing a vacuum
-Holding a vacuum
-Taking a vacuum from somewhere
-Washing their hands
-Fixing a doorknob
-Grasping onto a doorknob
-Closing a refrigerator
-Opening a refrigerator
-Fixing their hair
-Working on paper/notebook
-Someone is awakening somewhere
-Someone is cooking something
-Someone is dressing
-Someone is laughing
-Someone is running somewhere
-Someone is going from standing to sitting
-Someone is smiling
-Someone is sneezing
-Someone is standing up from somewhere
-Someone is undressing
-Someone is eating something
+Holding_some_clothes
+Putting_clothes_somewhere
+Taking_some_clothes_from_somewhere
+Throwing_clothes_somewhere
+Tidying_some_clothes
+Washing_some_clothes
+Closing_a_door
+Fixing_a_door
+Opening_a_door
+Putting_something_on_a_table
+Sitting_on_a_table
+Sitting_at_a_table
+Tidying_up_a_table
+Washing_a_table
+Working_at_a_table
+Holding_a_phone-camera
+Playing_with_a_phone-camera
+Putting_a_phone-camera_somewhere
+Taking_a_phone-camera_from_somewhere
+Talking_on_a_phone-camera
+Holding_a_bag
+Opening_a_bag
+Putting_a_bag_somewhere
+Taking_a_bag_from_somewhere
+Throwing_a_bag_somewhere
+Closing_a_book
+Holding_a_book
+Opening_a_book
+Putting_a_book_somewhere
+Smiling_at_a_book
+Taking_a_book_from_somewhere
+Throwing_a_book_somewhere
+Watching-Reading-Looking_at_a_book
+Holding_a_towel-s
+Putting_a_towel-s_somewhere
+Taking_a_towel-s_from_somewhere
+Throwing_a_towel-s_somewhere
+Tidying_up_a_towel-s
+Washing_something_with_a_towel
+Closing_a_box
+Holding_a_box
+Opening_a_box
+Putting_a_box_somewhere
+Taking_a_box_from_somewhere
+Taking_something_from_a_box
+Throwing_a_box_somewhere
+Closing_a_laptop
+Holding_a_laptop
+Opening_a_laptop
+Putting_a_laptop_somewhere
+Taking_a_laptop_from_somewhere
+Watching_a_laptop_or_something_on_a_laptop
+Working-Playing_on_a_laptop
+Holding_a_shoe-shoes
+Putting_shoes_somewhere
+Putting_on_shoe-shoes
+Taking_shoes_from_somewhere
+Taking_off_some_shoes
+Throwing_shoes_somewhere
+Sitting_in_a_chair
+Standing_on_a_chair
+Holding_some_food
+Putting_some_food_somewhere
+Taking_food_from_somewhere
+Throwing_food_somewhere
+Eating_a_sandwich
+Making_a_sandwich
+Holding_a_sandwich
+Putting_a_sandwich_somewhere
+Taking_a_sandwich_from_somewhere
+Holding_a_blanket
+Putting_a_blanket_somewhere
+Snuggling_with_a_blanket
+Taking_a_blanket_from_somewhere
+Throwing_a_blanket_somewhere
+Tidying_up_a_blanket-s
+Holding_a_pillow
+Putting_a_pillow_somewhere
+Snuggling_with_a_pillow
+Taking_a_pillow_from_somewhere
+Throwing_a_pillow_somewhere
+Putting_something_on_a_shelf
+Tidying_a_shelf_or_something_on_a_shelf
+Reaching_for_and_grabbing_a_picture
+Holding_a_picture
+Laughing_at_a_picture
+Putting_a_picture_somewhere
+Taking_a_picture_of_something
+Watching-looking_at_a_picture
+Closing_a_window
+Opening_a_window
+Washing_a_window
+Watching-Looking_outside_of_a_window
+Holding_a_mirror
+Smiling_in_a_mirror
+Washing_a_mirror
+Watching_something-someone-themselves_in_a_mirror
+Walking_through_a_doorway
+Holding_a_broom
+Putting_a_broom_somewhere
+Taking_a_broom_from_somewhere
+Throwing_a_broom_somewhere
+Tidying_up_with_a_broom
+Fixing_a_light
+Turning_on_a_light
+Turning_off_a_light
+Drinking_from_a_cup-glass-bottle
+Holding_a_cup-glass-bottle_of_something
+Pouring_something_into_a_cup-glass-bottle
+Putting_a_cup-glass-bottle_somewhere
+Taking_a_cup-glass-bottle_from_somewhere
+Washing_a_cup-glass-bottle
+Closing_a_closet-cabinet
+Opening_a_closet-cabinet
+Tidying_up_a_closet-cabinet
+Someone_is_holding_a_paper-notebook
+Putting_their_paper-notebook_somewhere
+Taking_paper-notebook_from_somewhere
+Holding_a_dish
+Putting_a_dish-es_somewhere
+Taking_a_dish-es_from_somewhere
+Wash_a_dish-dishes
+Lying_on_a_sofa-couch
+Sitting_on_sofa-couch
+Lying_on_the_floor
+Sitting_on_the_floor
+Throwing_something_on_the_floor
+Tidying_something_on_the_floor
+Holding_some_medicine
+Taking-consuming_some_medicine
+Putting_groceries_somewhere
+Laughing_at_television
+Watching_television
+Someone_is_awakening_in_bed
+Lying_on_a_bed
+Sitting_in_a_bed
+Fixing_a_vacuum
+Holding_a_vacuum
+Taking_a_vacuum_from_somewhere
+Washing_their_hands
+Fixing_a_doorknob
+Grasping_onto_a_doorknob
+Closing_a_refrigerator
+Opening_a_refrigerator
+Fixing_their_hair
+Working_on_paper-notebook
+Someone_is_awakening_somewhere
+Someone_is_cooking_something
+Someone_is_dressing
+Someone_is_laughing
+Someone_is_running_somewhere
+Someone_is_going_from_standing_to_sitting
+Someone_is_smiling
+Someone_is_sneezing
+Someone_is_standing_up_from_somewhere
+Someone_is_undressing
+Someone_is_eating_something
