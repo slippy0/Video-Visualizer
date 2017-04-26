@@ -1,3 +1,8 @@
+# My Changes
+This fork is primarily for viewing results from our network on the Cherades dataset.
+
+Note that it has been specifically designed to work on the videos resampled to 24 FPS, not the original videos. 
+
 # Video Predictions Visualizer
 
 A relatively bare-bones interface for visualizing per-frame predictions and
