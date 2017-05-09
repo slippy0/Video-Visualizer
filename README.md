@@ -1,5 +1,5 @@
 # My Changes
-This fork is primarily for viewing results from our network on the Cherades dataset.
+This fork is primarily for viewing results from our network on the Charades dataset.
 
 Note that it has been specifically designed to work on the videos resampled to 24 FPS, not the original videos. 
 
