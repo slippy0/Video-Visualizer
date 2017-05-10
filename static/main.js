@@ -157,14 +157,15 @@ function loadVideo(video) {
 
       // Define base layout for both plots
       var layout = {
-          xaxis: {title: 'Frame'},
           yaxis: {title: 'Action Class'},
           autosize: true,
-          margin: {t: 50, b: 50},
+          margin: {t: 40, b: 30},
+          height: 400,
       };
       // Deep copy the layout
       var layout_rgb = $.extend(true, {}, layout);
       var layout_flow = $.extend(true, {}, layout);
+      layout_flow.xaxis = {title: 'Frame'};
       layout_rgb.title = 'RGB Predictions';
       layout_flow.title = 'Flow Predictions';
 
