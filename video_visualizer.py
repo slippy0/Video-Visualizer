@@ -38,4 +38,5 @@ def predictions(video_name):
 
 
 if __name__ == '__main__':
+    app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
     app.run(threaded=True)

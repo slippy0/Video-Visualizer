@@ -1,4 +1,5 @@
 import torchfile
+import numpy as np
 import os
 import pdb
 
@@ -86,6 +87,8 @@ class CharadesLoader(DataLoader):
         # Load the data
         data = torchfile.load(file_path)
         pred_raw = data[0] # Hardcoding this, oops
+        pred_raw = np.maximum(pred_raw, 0) # ReLU
+        pred_raw = np.tanh(pred_raw)
 
         # Shape the data
         num_frames = pred_raw.shape[0]
