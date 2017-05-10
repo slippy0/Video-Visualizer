@@ -114,7 +114,8 @@ function loadVideo(video) {
   // time and then by end time.
   var allGroundtruth = null;
   // Object mapping label to array of prediction scores for each frame.
-  var allPredictions = null;
+  var allRgbPredictions = null;
+  var allFlowPredictions = null;
   var nextStart = 0;
   var videoLength = null;  // Video length in seconds
   var groundtruthLabels = null;
@@ -122,7 +123,8 @@ function loadVideo(video) {
 
   $('#predictions-scores').html('');
   $('#groundtruth-labels').html('');
-  $('#predictions-graph').html('');
+  $('#predictions-graph-rgb').html('');
+  $('#predictions-graph-flow').html('');
 
   $('video').attr('src', 'video/' + video);
   $('video').on('loadeddata', function() {
@@ -130,24 +132,43 @@ function loadVideo(video) {
   });
 
   $('#debug').text('Loading groundtruth and predictions...');
-  $.when($.get('/groundtruth/' + video), $.get('/predictions/' + video)).then(
-    function(groundtruthResponse, predictionsResponse) {
+  $.when($.get('/groundtruth/' + video), $.get('/predictions/' + video), $.get('/flow_predictions/' + video)).then(
+    function(groundtruthResponse, predictionsResponse, flowPredictionsResponse) {
       $('#debug').text('');
       allGroundtruth = normalizeGroundtruth(groundtruthResponse[0]);
-      allPredictions = predictionsResponse[0];
-      numFrames = allPredictions[Object.keys(allPredictions)[0]].length;
+      allRgbPredictions = predictionsResponse[0];
+      allFlowPredictions = flowPredictionsResponse[0];
+      numFrames = allRgbPredictions[Object.keys(allRgbPredictions)[0]].length;
 
       groundtruthLabels = getUniqueLabels(allGroundtruth);
       groundtruthLabels.sort();
       groundtruthLabels.forEach(function(label) { addLabel(label); });
 
-      var heatmapValues = [];
-      for (var label in allPredictions) {
-        heatmapValues.push(allPredictions[label]);
+      var rgb_heatmapValues = [];
+      var flow_heatmapValues = [];
+      for (var label in allRgbPredictions) {
+        rgb_heatmapValues.push(allRgbPredictions[label]);
       }
-      var data = [{z: heatmapValues, type: 'heatmap', colorscale: 'Greys'}];
-      var layout = {title: 'Predictions'};
-      Plotly.newPlot('predictions-graph', data, layout, {linkText: 'hi'});
+      for (var label in allFlowPredictions) {
+        flow_heatmapValues.push(allFlowPredictions[label]);
+      }
+      var data_rgb = [{z: rgb_heatmapValues, type: 'heatmap', colorscale: 'Greys'}];
+      var data_flow = [{z: flow_heatmapValues, type: 'heatmap', colorscale: 'Greys'}];
+
+      // Define base layout for both plots
+      var layout = {
+          xaxis: {title: 'Frame'},
+          yaxis: {title: 'Action Class'},
+          autosize: true
+      };
+      // Deep copy the layout
+      var layout_rgb = $.extend(true, {}, layout);
+      var layout_flow = $.extend(true, {}, layout);
+      layout_rgb.title = 'RGB Predictions';
+      layout_flow.title = 'Flow Predictions';
+
+      Plotly.newPlot('predictions-graph-rgb', data_rgb, layout_rgb, {linkText: 'hi'});
+      Plotly.newPlot('predictions-graph-flow', data_flow, layout_flow, {linkText: 'hi'});
     },
     function() {  // Failed request
       $('#debug').text('Request for predictions or groundtruth failed.');
@@ -164,7 +185,7 @@ function loadVideo(video) {
     var frame = Math.round(time * numFrames / videoLength);
     var scores = {}
     groundtruthLabels.forEach(function(label) {
-      scores[label] = allPredictions[label][frame];
+      scores[label] = allRgbPredictions[label][frame];
     })
     updateScores(scores);
 

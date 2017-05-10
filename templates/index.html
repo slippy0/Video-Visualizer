@@ -12,22 +12,26 @@
   <body>
     <select id='video-selector'>
     </select>
-    <div id="video-realtime-labels">
-      <video controls></video>
-      <div id="realtime-labels">
-        <div id='groundtruth'>
-          <b>Groundtruth</b>
-          <div id='groundtruth-labels'>
+    <div id="content">
+        <div id="video-realtime-labels">
+          <video controls></video>
+          <div id="realtime-labels">
+            <div id='groundtruth'>
+              <b>Groundtruth</b>
+              <div id='groundtruth-labels'> </div>
+            </div>
+            <div id='predictions'>
+              <b>Prediction</b>
+              <div id='predictions-scores'>
+              </div>
+            </div>
           </div>
         </div>
-        <div id='predictions'>
-          <b>Prediction</b>
-          <div id='predictions-scores'>
-          </div>
+        <div id="prediction-graphs">
+            <h2 id="debug"></h1>
+            <div id='predictions-graph-rgb'></div>
+            <div id='predictions-graph-flow'></div>
         </div>
-      </div>
     </div>
-    <h2 id="debug"></h1>
-    <div id='predictions-graph'></div>
   </body>
 </html>

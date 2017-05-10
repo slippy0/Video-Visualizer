@@ -2,6 +2,7 @@ import torchfile
 import numpy as np
 import os
 import pdb
+from time import time
 
 from data_loader import DataLoader
 
@@ -11,14 +12,17 @@ class CharadesLoader(DataLoader):
     SAMPLE_RATE = 10 # one prediction per N frames
     _TIME_PER_SAMPLE = SAMPLE_RATE / float(FRAME_RATE)
 
-    def __init__(self, videos_dir, prediction_dir, class_list):
+    def __init__(self, videos_dir, rgb_prediction_dir, flow_prediction_dir, class_list):
         """
         videos_dir     - Path to directory of videos.
-        prediction_dir - Path to directory of .t7 predictions, one per video.
+        rgb_prediction_dir - Path to directory of .t7 predictions, one per video.
+        flow_prediction_dir - Path to directory of .t7 predictions, one per video.
+        class_list     - Path of file with list of class names.
         """
         print "Init Charades"
         self.videos_dir = videos_dir
-        self.prediction_dir = prediction_dir
+        self.rgb_prediction_dir = rgb_prediction_dir
+        self.flow_prediction_dir = flow_prediction_dir
         with open(class_list) as f:
             self.class_list = [line.strip() for line in f.readlines()]
         self._video_list = None
@@ -51,7 +55,7 @@ class CharadesLoader(DataLoader):
         """
         # Get full filepath
         video_name = os.path.splitext(video_name)[0]
-        file_path = os.path.join(self.prediction_dir, video_name + ".t7")
+        file_path = os.path.join(self.rgb_prediction_dir, video_name + ".t7")
 
         # Load the data
         data = torchfile.load(file_path)
@@ -82,7 +86,42 @@ class CharadesLoader(DataLoader):
         """
         # Get full filepath
         video_name = os.path.splitext(video_name)[0]
-        file_path = os.path.join(self.prediction_dir, video_name + ".t7")
+        file_path = os.path.join(self.rgb_prediction_dir, video_name + ".t7")
+
+        # Load the data
+        data = torchfile.load(file_path)
+        pred_raw = data[0] # Hardcoding this, oops
+        pred_raw = np.maximum(pred_raw, 0) # ReLU
+        pred_raw = np.tanh(pred_raw)
+
+        # Shape the data
+        num_frames = pred_raw.shape[0]
+        num_classes = pred_raw.shape[1]
+
+        # Put into required format
+        predictions = {}
+        for class_idx, class_name in enumerate(self.class_list):
+            # Repeat by SAMPLE_RATE to have one label per frame
+            predictions[class_name] = pred_raw[:,class_idx] \
+                    .flatten() \
+                    .repeat(CharadesLoader.SAMPLE_RATE) \
+                    .tolist()
+
+        return predictions
+
+    def video_flow_predictions(self, video_name):
+        """
+        Args:
+            video_name (str): One video name from the list returned by
+                video_list.
+
+        Returns:
+            predictions (dict): Maps label name to list of floats representing
+                confidences. The list spans the length of the video.
+        """
+        # Get full filepath
+        video_name = os.path.splitext(video_name)[0]
+        file_path = os.path.join(self.flow_prediction_dir, video_name + ".t7")
 
         # Load the data
         data = torchfile.load(file_path)
