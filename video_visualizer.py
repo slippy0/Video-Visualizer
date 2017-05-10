@@ -36,6 +36,9 @@ def groundtruth(video_name):
 def predictions(video_name):
     return flask.jsonify(data_loader.video_predictions(video_name))
 
+@app.route('/flow_predictions/<video_name>')
+def video_flow_predictions(video_name):
+    return flask.jsonify(data_loader.video_predictions(video_name))
 
 if __name__ == '__main__':
     app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
