@@ -159,7 +159,8 @@ function loadVideo(video) {
       var layout = {
           xaxis: {title: 'Frame'},
           yaxis: {title: 'Action Class'},
-          autosize: true
+          autosize: true,
+          margin: {t: 50, b: 50},
       };
       // Deep copy the layout
       var layout_rgb = $.extend(true, {}, layout);
