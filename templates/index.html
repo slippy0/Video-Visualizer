@@ -8,27 +8,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/static/main.js"></script>
     <link rel="stylesheet" href="/static/main.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
   </head>
   <body>
-    <select id='video-selector'>
-    </select>
-    <div id="content">
-        <div id="video-realtime-labels">
+    <div id="content" class="container-fluid">
+        <select id='video-selector' class='form-control' style='margin-bottom:10px'></select>
+        <div id="video-realtime-labels" class='col-md-4'>
           <video controls></video>
-          <div id="realtime-labels">
-            <div id='groundtruth'>
-              <b>Groundtruth</b>
+          <div id="realtime-labels" class="container-fluid">
+            <div id='groundtruth' class='col-sm-8 col-sm-offset-1 col-xs-9'>
+              <h3>Groundtruth</h3>
               <div id='groundtruth-labels'> </div>
             </div>
-            <div id='predictions'>
-              <b>Prediction</b>
+            <div id='predictions' class='col-sm-2 col-sm-offset-1 col-xs-3'>
+              <h3>Prediction</h3>
               <div id='predictions-scores'>
               </div>
             </div>
           </div>
+          <h2 id="debug"></h2>
         </div>
-        <div id="prediction-graphs">
-            <h2 id="debug"></h1>
+        <div id="prediction-graphs" class='col-md-8'>
             <div id='predictions-graph-rgb'></div>
             <div id='predictions-graph-flow'></div>
         </div>

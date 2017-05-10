@@ -7,11 +7,11 @@ function groundtruthLabelId(label) {
 
 function addLabel(label) {
   var groundtruthLabelDiv = $('<div/>')
-                                .addClass('label')
+                                .addClass('row')
                                 .attr('id', groundtruthLabelId(label))
                                 .text(label);
   var predictionsLabelDiv = $('<div/>')
-                                .addClass('label')
+                                .addClass('row')
                                 .attr('id', 'prediction-label-' + label)
   var predictionsScore = $('<span/>')
                              .addClass('prediction-score')
@@ -167,6 +167,7 @@ function loadVideo(video) {
       layout_rgb.title = 'RGB Predictions';
       layout_flow.title = 'Flow Predictions';
 
+      // Plot them
       Plotly.newPlot('predictions-graph-rgb', data_rgb, layout_rgb, {linkText: 'hi'});
       Plotly.newPlot('predictions-graph-flow', data_flow, layout_flow, {linkText: 'hi'});
     },
