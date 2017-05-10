@@ -8,6 +8,7 @@ body { }
 video {
   vertical-align: middle;
   width: 500px;
+  max-height: 500px;
 }
 
 #realtime-labels {
