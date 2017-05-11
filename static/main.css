@@ -24,3 +24,8 @@ video {
   background: black;
 }
 
+@media only screen and (max-width: 650px) {
+    video {
+		min-width: 250px;
+    }
+}
